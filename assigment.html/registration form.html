@@ -22,95 +22,193 @@ div{
 <div class="form-container">
 
 
-<u><h1>registration-form</h1></u>
+<u style="color: #e65b00;"><h1>registration-form</h1></u>
  
 
 <h2>persnol detail</h2>
 
 <body>
-
-        <form action="/submit-registration" method="post">
-            <table>
-                <tr>
-                
-                </tr>
-                <tr>
-                    <td><label for="full name">Full Name:</label></td>
-                    <td><input type="text" id="full name" name="full Name" required></td>
-            
-                    <td><label for="father name">father Name:</label></td>
-                    <td><input type="text" id="father name" name="father name" required></td>
-            
-            
-                    <td><label for="mother name">mother name:</label></td>
-                    <td><input type="text" id="mother name" name="mother name" required></td>
-
-                </tr>
-                
-                
-                    <td><label for="date of brithaday">date of brithaday:</label></td>
-                    <td><input type="date" id="date of brithaday" name="date of brithaday" required></td>
-                
-                
-                    <td><label for="full name">full name</label></td>
-                    <td><input type="text" id="full name" name="full name" required></td>
-
-                    <td><label for="email">email</label></td>
-                    <td><input type="text" id="email" name="email" required></td>
-
-            </tr>
-
-            <td><label for="mobile number">mobile number</label></td>
-            <td><input type="number" id="m number" name="m number" required></td>
-            
-            <td><label for="gander">gander</label></td>
-            <td><input type="text" id="gender" name="gander" required></td>
-
-            <td><label for="address">address</label></td>
-            <td><input type="text" id="address" name="address" required></td>
-
-
-        </tr>
-
-
-         <th>other detail </th>       
-
-
-    </tr>
-
-         <td><label for="stream">stream</label></td>
-         <td><input type="text" id="stream" name="stream" required></td>
     
-        <td><label for="previous class">previous class</label></td>
-        <td><input type="text" id="previous class" name="previous class" required></td>
 
-        <td><label for="hobbies">hobbies</label></td>
-        <td><input type="text" id="hobbies" name="hobbies" required></td>
+    <style>
 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        width: 100%;
+        background-color: rgb(238, 241, 241);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .registration-container {
+        background: #fff;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .registration-container h2 {
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    
+    .registration-container h2::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 3px;
+        width: 20%;
+        border-radius: 2px;
+        background-color: #e65b00;
+    }
+    
+    .three-details-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    hr {
+        width: 70%;
+        height: 1px;
+        background-color: #d2d2d2;
+        margin: 1rem 0;
+        border: none;
+    }
+    
+    .personal-details,
+    .identity-details {
+        margin: .2rem 0;
+    }
+    
+    .personal-details label,
+    .identity-details label {
+        margin: .5rem 1rem;
+        font-size: .9rem;
+        font-weight: 600;
+    }
+    
+    .three-details-item input {
+        outline: none;
+        font-size: .8rem;
+        border-radius: .2rem;
+        border: 1px solid rgb(113, 101, 101);
+        padding: .1rem;
+        background-color: transparent;
+    }
+    
+    .submit-btn {
+        border: none;
+        background-color: #e65b00;
+        color: white;
+        padding: .3rem 1rem;
+        display: block;
+        width: 50%;
+        margin: .6rem auto;
+        border-radius: 2rem;
+        font-size: 1.1rem;
+    }
+        </style>
 
-</tr>
+    <section class="details-section">
+        <form action="" class="registration-form">
+            <section class="personal-details">
+                <div class="three-details-item">
+                    <label for="name">
+                        <p>Full Name</p>
+                        <input type="text" name="name" id="name" placeholder="Enter your name">
+                    </label>
+                    <label for="fName">
+                        <p> Father Name </p>
+                        <input type="text" name="fName" id="fName" placeholder="Enter father name">
+                    </label>
+                    <label for="mName">
+                        <p>Mother Name</p>
+                        <input type="text" name="mName" id="mName" placeholder="Enter mother name">
+                    </label>
+                </div>
 
-       <td><label for="Acount number">Acount number</label></td>
-       <td><input type="number" id="a number" name="a number" required></td>
-
-      <td><label for="religion">religion</label></td>
-      <td><input type="text" id="religion" name="religion" required></td>
-
-      <td><label for="categroy">categroy</label></td>
-      <td><input type="text" id="categroy" name="categroy" required></td>
-   
-       
-
-
-</tr>                
+                <div class="three-details-item">
+                    <label for="DOB">
+                        <p>Date of Birth</p>
+                        <input type="text" name="DOB" id="DOB" placeholder="Enter your DOB">
+                    </label>
+                    <label for="aadharNo">
+                        <p>Full Name</p>
+                        <input type="text" name="aadharNo" id="aadharNo" placeholder="Enter aadhar number">
+                    </label>
+                    <label for="email">
+                        <p>Email</p>
+                        <input type="email" name="email" id="email" placeholder="Enter your email">
+                    </label>
+                </div>
                 
-                
-                    <td colspan="2" class="form-submit">
-                        <input type="submit" value="submit" style="color: darkorange;" >
-                    </td>
-                </tr>
-            </table>
+                <div class="three-details-item">
+                    <label for="ph">
+                        <p> Mobile Number</p>
+                        <input type="tel" name="phone" id="ph" placeholder="Enter mobile number">
+                    </label>
+
+                    <label for="gender">
+                        <p> Gender</p>
+                        <input type="text" name="gender" id="gender" placeholder="Enter your gender">
+                    </label>
+
+                    <label for="address">
+                        <p> Address </p>
+                        <input type="text" name="address" id="address" placeholder="Enter your Address">
+                    </label>
+                </div>
+            </section>
+
+            <hr>
+
+    
+            <h4> Other Details </h4>
+            <section class="identity-details">
+                <div class="three-details-item">
+                    <label for="stream">
+                        <p> Stream </p>
+                        <input type="text" name="stream" id="stream" placeholder="Enter your stream">
+                    </label>
+                    <label for="previousClass">
+                        <p> Previous Class </p>
+                        <input type="text" name="previousClass" id="previousClass"
+                            placeholder="Enter previous class">
+                    </label>
+                    <label for="hobbies">
+                        <p> Hobbies </p>
+                        <input type="text" name="hobbies" id="hobbies" placeholder="Enter your hobbies">
+                    </label>
+                </div>
+                <div class="three-details-item">
+                    <label for="accNo">
+                        <p> Account Number </p>
+                        <input type="text" name="accNo" id="accNo" placeholder="Enter account number">
+                    </label>
+                    <label for="religion">
+                        <p> Religion </p>
+                        <input type="text" name="religion" id="religion" placeholder="Enter your religion">
+                    </label>
+                    <label for="category">
+                        <p> Category </p>
+                        <input type="text" name="category" id="category" placeholder="Enter your category">
+                    </label>
+                </div>
+            </section>
+            <button class="submit-btn"> Submit </button>
         </form>
-    </div>
+    </section>
+</section>
 </body>
+
 </html>
